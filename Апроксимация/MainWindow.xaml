@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Апроксимация"
         mc:Ignorable="d"
         Title="Построение функции" Height="520" Width="350" MinHeight="520" MaxHeight="520" MinWidth="350" MaxWidth="350">
-    <Grid Height="637" VerticalAlignment="Top">
+    <Grid Height="667" VerticalAlignment="Top">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
@@ -39,7 +39,7 @@
             </StackPanel>
         </GroupBox>
 
-        <StackPanel Orientation="Horizontal" Margin="20,178,20,82" Grid.RowSpan="2">
+        <StackPanel Orientation="Horizontal" Margin="20,5,20,82" Grid.Row="1">
 
             <TextBlock Text="Y(x)=" Grid.Row="1" HorizontalAlignment="Center" FontSize="15" />
             <TextBlock x:Name="A" Text="a" HorizontalAlignment="Center" FontSize="15"/>
@@ -53,7 +53,7 @@
             <TextBlock  x:Name="cSig" Text="+" HorizontalAlignment="Center" FontSize="15"/>
             <TextBlock  x:Name="C" Text="c" HorizontalAlignment="Center" FontSize="15"/>
         </StackPanel>
-        <GroupBox Header="Точка экстремума функции" Margin="0,50,0,0" Grid.Row="1" HorizontalAlignment="Center" Width="268">
+        <GroupBox Header="Точка экстремума функции" Margin="0,50,0,131" Grid.Row="1" HorizontalAlignment="Center" Width="268" Grid.RowSpan="2">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Width="208">
                 <DockPanel VerticalAlignment="Center">
                     <Label Content="X="/>
@@ -66,7 +66,7 @@
                 </DockPanel>
             </StackPanel>
         </GroupBox>
-        <StackPanel Margin="10,18,10,0" Grid.Row="2">
+        <StackPanel Margin="10,18,10,223" Grid.Row="2" Grid.RowSpan="2">
             <Label Content="Точка экстремума находится" FontSize="20" HorizontalAlignment="Center"/>
             <TextBlock x:Name="exPos" Text="Вне/внутри" FontSize="20" HorizontalAlignment="Center"/>
             <Label Content="области определения" FontSize="20" HorizontalAlignment="Center"/>
