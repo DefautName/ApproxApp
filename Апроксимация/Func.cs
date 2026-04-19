@@ -67,5 +67,29 @@ namespace Апроксимация
             else
                 return false;
         }
+
+        public double[] GetY(int n)
+        {
+            double[] massY = new double[n];
+            massY[0] = y1;
+            massY[n - 1] = y3;
+            for(int i=1;i<n-1;i++)
+            {
+                massY[i] = massY[i-1]+(y3 - y1) / n;
+            }
+            return massY;
+        }
+        public double[] GetX(int n)
+        {
+            double[] massY = GetY(n);
+            double[] massX=new double[n];
+
+            for (int i = 0; i < n; i++)
+            {
+                massX[i] = coefsFunc[0]*massY[i]* massY[i]+coefsFunc[1]* massY[i]+ coefsFunc[2];
+            }
+            
+            return massX;
+        }
     }
 }
