@@ -60,10 +60,16 @@ namespace Апроксимация
                 for (int i = 0; i < nOfStep; i++)
                     valueY[i]=funMass[0] * valueX[i] * valueX[i] + funMass[1] * valueX[i] + funMass[2];
 
+                //Отрисовка графиков
                 WpfPlot1.Plot.Clear();
                 double[] dataX = func.GetY(5);
                 double[] dataY = func.GetX(5);
+
+                double[] exPX = { exPoint.X };
+                double[] exPY = { exPoint.Y };
+
                 WpfPlot1.Plot.Add.Scatter(dataX, dataY);
+                WpfPlot1.Plot.Add.Scatter(exPX,exPY);
                 WpfPlot1.Refresh();
 
                 //FuncGraf.Render();

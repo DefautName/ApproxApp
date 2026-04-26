@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 
 namespace Апроксимация
 {
@@ -75,7 +76,7 @@ namespace Апроксимация
             massY[n - 1] = y3;
             for(int i=1;i<n-1;i++)
             {
-                massY[i] = massY[i-1]+(y3 - y1) / n;
+                massY[i] = massY[i-1]+(Math.Abs(y3) - Math.Abs(y1)) / n;
             }
             return massY;
         }
